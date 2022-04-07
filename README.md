@@ -1,2 +1,2 @@
 # Exercicio-Produtos
-Repositório de um exercício.
+Repositório do exercício da Semana 4 do curso de orientação a objeto com Java do ITA.
