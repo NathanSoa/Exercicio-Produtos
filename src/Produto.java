@@ -4,6 +4,22 @@ public class Produto {
 	private int codigo;
 	private double preco;
 	
+	@Override
+	public boolean equals(Object obj) {
+		
+		Produto produto = (Produto) obj;
+		
+		if((obj instanceof Produto) && produto.codigo == codigo)
+			return true;
+		else
+			return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return getCodigo();
+	}
+	
 	protected String getNome() {
 		return nome;
 	}
