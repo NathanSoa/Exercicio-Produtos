@@ -1,53 +1,25 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 
 class TestesProdutoComTamanho {
 
-	ProdutoComTamanho produto = new ProdutoComTamanho();
-	ProdutoComTamanho produto2 = new ProdutoComTamanho();
-	ProdutoComTamanho produto3 = new ProdutoComTamanho();
-	
-	@BeforeClass
-	void atribuiValores() {
-
-	}
+	ProdutoComTamanho produto = new ProdutoComTamanho("Produto Teste A", 10, 25.5, 42);
+	ProdutoComTamanho produto2 = new ProdutoComTamanho("Produto Teste B", 10, 26, 42);
+	ProdutoComTamanho produto3 = new ProdutoComTamanho("Produto Teste C", 10, 26.5, 39);
 	
 	@Test
 	void testeEqualsDoProdutoComCodigoIgualETamanhoIgual() {		
-		produto.setCodigo(10);
-		produto.setTamanho(42);
-		
-		produto2.setCodigo(10);
-		produto2.setTamanho(42);
 		assertEquals(true, produto.equals(produto2));
 	}
 	
 	@Test
 	void testeEqualsDoProdutoComCodigoIgualETamanhoDiferente() {		
-		produto.setCodigo(10);
-		produto.setTamanho(42);
-		
-		produto2.setCodigo(10);
-		produto2.setTamanho(42);
-		
-		produto3.setCodigo(10);
-		produto3.setTamanho(39);	
-		
 		assertEquals(false, produto.equals(produto3));
 	}
 	
 	@Test
 	void testeEqualsDoProdutoComMesmoObjeto() {		
-		produto.setCodigo(10);
-		produto.setTamanho(42);
-		
-		produto2.setCodigo(10);
-		produto2.setTamanho(42);
-		
-		produto3.setCodigo(10);
-		produto3.setTamanho(39);
 		assertEquals(true, produto.equals(produto));
 	}
 }

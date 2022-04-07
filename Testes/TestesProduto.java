@@ -1,18 +1,11 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 
 class TestesProduto {
 	
-	Produto produto = new Produto();
-	Produto produto2 = new Produto();
-	
-	@BeforeClass
-	void atribuiValores() {
-		produto.setCodigo(10);
-		produto2.setCodigo(10);
-	}
+	Produto produto = new Produto("Produto Teste A", 10, 25.70);
+	Produto produto2 = new Produto("Produto Teste B", 10, 29);
 	
 	@Test
 	void testeEqualsDoProdutoComutativamente() {

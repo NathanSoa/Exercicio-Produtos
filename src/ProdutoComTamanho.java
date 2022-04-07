@@ -3,6 +3,10 @@ public class ProdutoComTamanho extends Produto{
 
 	private int tamanho;
 	
+	public ProdutoComTamanho(String nome, int codigo, double preco, int tamanho) {
+		super(nome, codigo, preco);
+		this.tamanho = tamanho;
+	}
 	@Override
 	public boolean equals(Object obj) {
 		
