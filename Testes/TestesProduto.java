@@ -17,6 +17,7 @@ class TestesProduto {
 	@Test
 	void testeEqualsDoProduto() {
 		assertEquals(produto.equals(produto2), true);
+		assertEquals(produto2.equals(produto), true);
 	}
 	
 	@Test
