@@ -9,12 +9,16 @@ public class Produto {
 		
 		Produto produto = (Produto) obj;
 		
-		if(produto.codigo == codigo)
+		if((obj instanceof Produto) && produto.codigo == codigo)
 			return true;
 		else
 			return false;
 	}
 	
+	@Override
+	public int hashCode() {
+		return getCodigo();
+	}
 	
 	protected String getNome() {
 		return nome;
