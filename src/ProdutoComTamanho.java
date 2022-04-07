@@ -1,4 +1,4 @@
 
-public class ProdutoComTamanho {
+public class ProdutoComTamanho{
 
 }

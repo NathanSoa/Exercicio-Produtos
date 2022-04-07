@@ -4,6 +4,18 @@ public class Produto {
 	private int codigo;
 	private double preco;
 	
+	@Override
+	public boolean equals(Object obj) {
+		
+		Produto produto = (Produto) obj;
+		
+		if(produto.codigo == codigo)
+			return true;
+		else
+			return false;
+	}
+	
+	
 	protected String getNome() {
 		return nome;
 	}
