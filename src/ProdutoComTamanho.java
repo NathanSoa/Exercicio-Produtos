@@ -21,6 +21,11 @@ public class ProdutoComTamanho extends Produto{
 			return false;
 	}
 	
+	@Override
+	public int hashCode() {
+		return this.getCodigo();
+	}
+	
 	protected int getTamanho() {
 		return tamanho;
 	}
