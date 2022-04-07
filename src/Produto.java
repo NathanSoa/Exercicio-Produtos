@@ -1,11 +1,21 @@
 
 public class Produto {
+	
 	private String nome;
 	private int codigo;
 	private double preco;
 	
+	public Produto(String nome, int codigo, double preco) {
+		super();
+		this.nome = nome;
+		this.codigo = codigo;
+		this.preco = preco;
+	}
 	@Override
 	public boolean equals(Object obj) {
+		
+		if(obj == this)
+			return true;
 		
 		Produto produto = (Produto) obj;
 		

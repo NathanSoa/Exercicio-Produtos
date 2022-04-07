@@ -1,22 +1,21 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 
 class TestesProduto {
 	
-	Produto produto = new Produto();
-	Produto produto2 = new Produto();
+	Produto produto = new Produto("Produto Teste A", 10, 25.70);
+	Produto produto2 = new Produto("Produto Teste B", 10, 29);
 	
-	@BeforeClass
-	void atribuiValores() {
-		produto.setCodigo(10);
-		produto2.setCodigo(10);
+	@Test
+	void testeEqualsDoProdutoComutativamente() {
+		assertEquals(true, produto.equals(produto2));
+		assertEquals(true, produto2.equals(produto));
 	}
 	
 	@Test
-	void testeEqualsDoProduto() {
-		assertEquals(produto.equals(produto2), true);
+	void testeEqualsDoProdutoComMesmoObjeto() {
+		assertEquals(true, produto.equals(produto));
 	}
 	
 	@Test
