@@ -7,6 +7,9 @@ public class Produto {
 	@Override
 	public boolean equals(Object obj) {
 		
+		if(obj == this)
+			return true;
+		
 		Produto produto = (Produto) obj;
 		
 		if((obj instanceof Produto) && produto.codigo == codigo)

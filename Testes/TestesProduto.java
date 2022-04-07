@@ -15,9 +15,14 @@ class TestesProduto {
 	}
 	
 	@Test
-	void testeEqualsDoProduto() {
-		assertEquals(produto.equals(produto2), true);
-		assertEquals(produto2.equals(produto), true);
+	void testeEqualsDoProdutoComutativamente() {
+		assertEquals(true, produto.equals(produto2));
+		assertEquals(true, produto2.equals(produto));
+	}
+	
+	@Test
+	void testeEqualsDoProdutoComMesmoObjeto() {
+		assertEquals(true, produto.equals(produto));
 	}
 	
 	@Test
